@@ -4,38 +4,42 @@ import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" style="background-color: #f1b70e;">
+      <div class="container">
+        <a class="navbar-brand" href="/">Duckiehunt</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/mark">Add a duck</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/duck">View a duck</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <RouterView />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
 </template>
-
 <style>
+#app {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+</style>
+<!--
 @import "@/assets/base.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
 
 header {
   line-height: 1.5;
@@ -64,7 +68,6 @@ nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -115,11 +118,11 @@ nav a:first-of-type {
 
   nav {
     text-align: left;
-    margin-left: -1rem;
     font-size: 1rem;
 
     padding: 1rem 0;
-    margin-top: 1rem;
-  }
+    margin-top: 0rem;
+    }
 }
 </style>
+-->

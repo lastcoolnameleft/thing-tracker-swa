@@ -5,10 +5,16 @@ Info forthcoming.
 ## Development
 
 ```
-swa start vue-js/dist --api-location api
-
-npm run-script build
-
+# Window 1 - dynamic reload
+cd vue-js
 npm run dev
+
+# Window 2 - static build
+cd vue-js
+npm run-script build
+cd ..
+swa start vue-js/dist --api-location api
+open http://localhost:4280
+# to see updated content, run: npm run-script build
 ```
 
