@@ -13,7 +13,7 @@ npm run dev
 cd vue-js
 npm run-script build
 cd ..
-swa start vue-js/dist --api-location api
+swa start 
 open http://localhost:4280
 # to see updated content, run: npm run-script build
 ```

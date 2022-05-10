@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import MainView from "../views/MainView.vue";
+import MarkView from "../views/MarkView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,6 +10,11 @@ const router = createRouter({
       path: "/",
       name: "main",
       component: MainView,
+    },
+    {
+      path: "/mark",
+      name: "mark",
+      component: MarkView,
     },
     {
       path: "/about",
@@ -24,7 +30,7 @@ const router = createRouter({
       component: () => import("../views/FAQ.vue"),
     },
     {
-      path: "/duck",
+      path: "/duck/:duck_id",
       name: "duck",
       component: () => import("../views/Duck.vue"),
     },

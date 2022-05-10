@@ -1,6 +1,7 @@
 src
 package-lock.json
 bak/
+trash/
 
 .DS_Store
 node_modules
