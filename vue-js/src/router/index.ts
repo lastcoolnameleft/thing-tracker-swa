@@ -30,9 +30,9 @@ const router = createRouter({
       component: () => import("../views/FAQ.vue"),
     },
     {
-      path: "/duck/:duck_id",
+      path: "/duck/:duck_id?",
       name: "duck",
-      component: () => import("../views/Duck.vue"),
+      component: () => import("../views/DuckView.vue"),
     },
   ],
 });
